@@ -1,0 +1,206 @@
+.header {
+    @apply fixed bg-white border-b-2 border-b-siteBg lg:bg-transparent lg:relative w-full flex justify-between items-center py-2 lg:py-9 px-4 xl:px-0 z-20;
+
+    img {
+        @apply w-36 sm:w-44;
+    }
+
+    .nav {
+        @apply hidden lg:flex gap-8 items-center;
+
+        .nav_link {
+            @apply text-siteBlue text-base;
+
+            &:hover {
+                @apply underline;
+            }
+        }
+    }
+
+    .searchBox {
+        @apply relative w-14 h-14 bg-white flex justify-between overflow-hidden shadow-md;
+
+        transition: .5s;
+
+        .search {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer;
+        }
+
+        .close {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer scale-0;
+
+            transition: .5s;
+        }
+
+        .searchInput {
+            @apply absolute left-14 h-full;
+
+            width: calc(100% - 112px);
+            line-height: 56px;
+
+            input {
+                @apply absolute w-full h-full border-none outline-none text-base;
+            }
+        }
+    }
+
+    .searchBox.active {
+        @apply w-80;
+
+        .close {
+            @apply scale-100 delay-500;
+        }
+    }
+}
+
+.burger {
+
+    @apply relative flex lg:hidden justify-center items-center w-[30px] h-[30px] cursor-pointer;
+
+    transition: all .5s ease-in-out;
+}
+
+.burger_btn {
+
+    @apply w-[30px] h-[4px] bg-siteBlue rounded;
+
+    transition: all .5s ease-in-out;
+
+    &::after,
+    &::before {
+
+        @apply absolute w-[30px] h-[4px] bg-siteBlue rounded;
+
+        content: '';
+        transition: all .5s ease-in-out;
+    }
+
+    &::before {
+        transform: translateY(-8px);
+    }
+
+    &::after {
+        transform: translateY(8px);
+    }
+}
+
+.burger.open {
+
+    .burger_btn {
+        transform: translateX(-25px);
+        background: transparent;
+
+        &::after {
+            transform: rotate(-45deg) translate(18px, 18px);
+        }
+
+        &::before {
+            transform: rotate(45deg) translate(18px, -18px);
+        }
+    }
+}
+
+.menu {
+    @apply h-screen w-full sm:w-1/2 top-0 fixed z-10 pt-[56.81px] sm:pt-[63.44px] text-white bg-siteBlue;
+
+    
+    transition: transform 1s ease-in-out;
+    transform: translateX(-200%);
+
+    .searchBoxMenu {
+        @apply relative w-14 h-14 bg-white text-black flex justify-between overflow-hidden shadow-md;
+
+        transition: .5s;
+
+        .searchMenu {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer;
+        }
+
+        .closeMenu {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer scale-0;
+
+            transition: .5s;
+        }
+
+        .searchInput {
+            @apply absolute left-14 h-full;
+
+            width: calc(100% - 112px);
+            line-height: 56px;
+
+            input {
+                @apply absolute w-full h-full border-none outline-none text-base;
+            }
+        }
+    }
+
+    .searchBoxMenu.active {
+        @apply w-full;
+
+        .closeMenu {
+            @apply scale-100 delay-500;
+        }
+    }
+
+    ul {
+        li {
+            @apply text-2xl my-4 text-center;
+        }
+
+        &:last-child li:nth-child(5) {
+            @apply pt-4;
+        }
+    }
+}
+
+.menu.open {
+    @apply z-10 ;
+
+    transform: translateX(0);
+
+    .searchBoxMenu {
+        @apply relative w-14 h-14 bg-white flex text-black justify-between overflow-hidden shadow-md;
+
+        transition: .5s;
+
+        .searchMenu {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer;
+        }
+
+        .closeMenu {
+            @apply relative min-w-[56px] h-14 flex justify-center items-center text-lg cursor-pointer scale-0;
+
+            transition: .5s;
+        }
+
+        .searchInput {
+            @apply absolute left-14 h-full;
+
+            width: calc(100% - 112px);
+            line-height: 56px;
+
+            input {
+                @apply absolute w-full h-full border-none outline-none text-base;
+            }
+        }
+    }
+
+    .searchBoxMenu.active {
+        @apply w-full;
+
+        .closeMenu {
+            @apply scale-100 delay-500;
+        }
+    }
+
+    ul {
+
+        li {
+            @apply text-2xl my-4 text-center;
+        }
+
+        &:last-child li:nth-child(5) {
+            @apply pt-4;
+        }
+    }
+}
