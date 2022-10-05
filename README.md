@@ -8,7 +8,7 @@ Iterior Company Landing Page
 <p>The site has a nice color palette. Green and blue colors really fit together and they are the main colors used in this project.
 Also the page has really cool animaitions on scroll, objeccts are appearing and fading in when you scroll, check it out.
 </p>
-This page is fully adaptive and comperable with any device!
+This page is fully adaptive and comperable with any device! </br>
 Demo: https://takemeawayy.github.io/Interior-Company/public/index.html 
 
 ### Here's what I used in developing this project:
