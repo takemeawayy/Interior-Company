@@ -9,6 +9,7 @@ Iterior Company Landing Page
 Also the page has really cool animaitions on scroll, objeccts are appearing and fading in when you scroll, check it out.
 </p>
 This page is fully adaptive and comperable with any device!
+Demo: https://takemeawayy.github.io/Interior-Company/public/index.html 
 
 ### Here's what I used in developing this project:
 
